@@ -1,0 +1,195 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/LevelScript.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/RedWall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Text/Untitled-1.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/CheckPointDetection.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 24 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 24 )
+
+[node name="Level 2" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="CheckPoints" type="Node" parent="."]
+
+[node name="CP1" type="Node2D" parent="CheckPoints" groups=[
+"CheckPointGroup",
+]]
+position = Vector2( 160, 112 )
+
+[node name="Sprite" type="Sprite" parent="CheckPoints/CP1"]
+modulate = Color( 0.670588, 1, 0.588235, 1 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="CheckPoints/CP1"]
+input_pickable = false
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoints/CP1/Area2D"]
+shape = SubResource( 1 )
+
+[node name="CP2" type="Node2D" parent="CheckPoints" groups=[
+"CheckPointGroup",
+]]
+position = Vector2( 896, 448 )
+
+[node name="Sprite2" type="Sprite" parent="CheckPoints/CP2"]
+modulate = Color( 1, 0.588235, 0.92549, 1 )
+position = Vector2( 1, 1 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
+
+[node name="Area2D2" type="Area2D" parent="CheckPoints/CP2"]
+position = Vector2( 1, 1 )
+input_pickable = false
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoints/CP2/Area2D2"]
+shape = SubResource( 2 )
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 3 )]
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 992, 280 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 568 )
+scale = Vector2( 14, 1 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 512, -8 )
+scale = Vector2( 14, 1 )
+
+[node name="Wall7" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 96, 56 )
+
+[node name="Wall8" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 96, 176 )
+
+[node name="Wall9" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 96, 240 )
+
+[node name="Wall10" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 160, 240 )
+
+[node name="Wall11" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 224, 176 )
+
+[node name="Wall12" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 224, 56 )
+
+[node name="Wall13" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 160, 304 )
+
+[node name="Wall14" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 160, 368 )
+
+[node name="Wall15" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 160, 504 )
+
+[node name="Wall16" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 224, 504 )
+
+[node name="Wall17" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 224, 288 )
+
+[node name="Wall18" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 288, 288 )
+
+[node name="Wall19" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 352, 288 )
+
+[node name="Wall20" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 288 )
+
+[node name="Wall21" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 224 )
+
+[node name="Wall22" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 160 )
+
+[node name="Wall23" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 480, 160 )
+
+[node name="Wall24" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 96 )
+
+[node name="Wall25" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 352 )
+
+[node name="Wall26" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 352 )
+
+[node name="Wall27" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 608, 56 )
+
+[node name="Wall28" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 608, 120 )
+
+[node name="Wall29" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 608, 184 )
+
+[node name="Wall30" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 672, 120 )
+
+[node name="Wall31" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 736, 120 )
+
+[node name="Wall32" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 736, 120 )
+
+[node name="Wall33" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 864, 120 )
+
+[node name="Wall34" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 928, 120 )
+
+[node name="Wall35" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 864, 184 )
+
+[node name="Wall36" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 864, 248 )
+
+[node name="Wall37" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 864, 312 )
+
+[node name="Wall38" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 800, 248 )
+
+[node name="Wall39" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 736, 312 )
+
+[node name="Wall40" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 736, 376 )
+
+[node name="Wall41" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 736, 440 )
+
+[node name="Wall42" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 672, 416 )
+
+[node name="Wall43" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 672, 416 )
+
+[node name="Wall44" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 352, 504 )
+
+[node name="Wall45" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 416, 504 )
+
+[node name="Wall46" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 480, 504 )
+
+[connection signal="body_entered" from="CheckPoints/CP1/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CheckPoints/CP2/Area2D2" to="." method="_on_Area2D2_body_entered"]
